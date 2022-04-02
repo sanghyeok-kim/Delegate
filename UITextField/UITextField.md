@@ -2,7 +2,7 @@
 
 <br>
 
-# `UITextFieldDelegate` - [Documentation](https:/*/developer.apple.com/documentation/uikit/*uitextfielddelegate)
+# `UITextFieldDelegate` - [Document](https:/*/developer.apple.com/documentation/uikit/*uitextfielddelegate)
 
 - `required` : *없음*
 
