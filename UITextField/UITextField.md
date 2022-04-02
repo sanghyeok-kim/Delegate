@@ -7,21 +7,8 @@
 - `required` : *없음*
 
 <br>
-<br>
 
 ## Managing Editing
-
-```swift
-func textField(_:shouldChangeCharactersIn:replacementString:)
-```
-
-: *지정된 텍스트를 변경할지 여부를 `delegate`에게 묻습니다.*
-
-- 텍스트 필드가 편집될 때 마다 실행됨
-  - `true` 반환시 지정된 텍스트 범위를 대체
-  - `false` 반환시 기존 텍스트를 유지 
-
-<br>
 
 ```swift
 func textFieldShouldBeginEditing(UITextField) -> Bool
@@ -55,11 +42,11 @@ func textFieldShouldEndEditing(UITextField) -> Bool
 <br>
 
 ```swift
-func textFieldDidEndEditing(UITextField, reason: *UITextFieldDidEndEditingReason)*
+func textFieldDidEndEditing(UITextField, reason: UITextFieldDidEndEditingReason)
 ```
 : *지정된 텍스트 필드에 대한 편집이 중지되는 시점과 중지된 이유를 `delegate`에게 알려줍니다.*
 
-- 중지된 이유(`reason`)는 `UITextField.DidEndEditingReason`이라는 `enum: *Int` 타입으로,<br>
+- 중지된 이유(`reason`)는 `UITextField.DidEndEditingReason`이라는 `enum: Int` 타입으로,<br>
   `committed = 0` 라는 하나의 케이스만 존재(어떻게 사용되는지는 아직 모르겠음..)
   - ```swift
     enum UITextField.DidEndEditingReason
@@ -73,17 +60,20 @@ func textFieldDidEndEditing(UITextField)
 ```
 : *지정된 텍스트 필드에 대해 편집이 중지될 때 `delegate`에게 알립니다.*
 
-- 텍스트 필드 편집이 중지될 때 실행됨
+- 텍스트 필드 편집이 끝났을 때(다른 텍스트 필드를 선택했을 때 등) 실행됨
 
 <br>
 
 ## Editing the Text Field's Text
 
 ```swift
-func textField(UITextField, shouldChangeCharactersIn: *NSRange, replacementString: *String) -> Bool*
+func textField(UITextField, shouldChangeCharactersIn: NSRange, replacementString: String) -> Bool
 ```
 : *지정된 텍스트를 변경할지 여부를 `delegate`에게 묻습니다.*
 
+- 텍스트 필드가 편집될 때 마다 실행됨
+  - `true` 반환시 지정된 텍스트 범위를 대체
+  - `false` 반환시 기존 텍스트를 유지 
 
 <br>
 
