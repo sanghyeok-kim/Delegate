@@ -69,12 +69,45 @@ func tableView(UITableView, didDeselectRowAt: IndexPath)
 
 <br>
 
-
-
 ```swift
 func tableView(UITableView, shouldBeginMultipleSelectionInteractionAt: IndexPath) -> Bool
 ```
-: *사용자가 두 손가락 이동 제스처를 사용하여 테이블 보기에서 여러 항목을 선택할 수 있는지 여부를 `delegate`에게 묻습니다.*
+: *사용자가 두 손가락 이동 제스처를 사용하여 테이블 뷰에서 여러 항목을 선택할 수 있는지 여부를 `delegate`에게 묻습니다.*
 - *Asks the delegate whether the user can use a two-finger pan gesture to select multiple items in a table view.*
+
 <br>
 
+```swift
+func tableView(UITableView, didBeginMultipleSelectionInteractionAt: IndexPath)
+```
+: *사용자가 테이블 뷰에서 여러 행을 선택하기 위해 두 손가락 이동 제스처를 사용하기 시작할 때 `delegate`에게 알립니다.*
+- *Tells the delegate when the user starts using a two-finger pan gesture to select multiple rows in a table view.*
+
+<br>
+
+```swift
+func tableViewDidEndMultipleSelectionInteraction(UITableView)
+```
+: *사용자가 테이블 뷰에서 여러 행을 선택하기 위해 두 손가락 이동 제스처 사용을 중지할 때 `delegate`에게 알립니다.*
+- *Tells the delegate when the user stops using a two-finger pan gesture to select multiple rows in a table view.*
+
+<br>
+<br>
+
+## Providing Custom Header and Footer Views
+
+```swift
+func tableView(UITableView, viewForHeaderInSection: Int) -> UIView?
+```
+: *테이블 뷰의 지정된 섹션 헤더에 표시할 뷰를 `delegate`에게 요청합니다.*
+- *Asks the delegate for a view to display in the header of the specified section of the table view.*
+
+<br>
+
+```swift
+func tableView(UITableView, viewForFooterInSection: Int) -> UIView?
+```
+: *테이블 뷰의 지정된 섹션 바닥글에 표시할 뷰를 `delegate`에게 요청합니다.*
+- *Asks the delegate for a view to display in the footer of the specified section of the table view.*
+
+<br>
