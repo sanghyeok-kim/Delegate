@@ -187,5 +187,44 @@ func tableView(UITableView, estimatedHeightForHeaderInSection: Int) -> CGFloat
 func tableView(UITableView, estimatedHeightForFooterInSection: Int) -> CGFloat
 ```
 : *특정 섹션 footer의 예상 높이를 `delegate`에게 요청합니다.*
-<br>Asks the delegate for the estimated height of the footer of a particular section.
+<br>*Asks the delegate for the estimated height of the footer of a particular section.*
 
+<br>
+<br>
+
+## Managing Accessory Views
+
+```swift
+func tableView(UITableView, accessoryButtonTappedForRowWith: IndexPath)
+```
+: *사용자가 지정된 행에 대한 세부 정보 버튼을 탭했음을 `delegate`에게 알립니다.*
+<br>*Tells the delegate that the user tapped the detail button for the specified row.*
+
+<br>
+<br>
+
+## Managing Context Menus
+
+```swift
+func tableView(UITableView, contextMenuConfigurationForRowAt: IndexPath, point: CGPoint) -> UIContextMenuConfiguration?
+```
+: *한 지점의 행에 대한 컨텍스트 메뉴 Configuration을 반환합니다.*
+<br>*Returns a context menu configuration for the row at a point.*
+
+<br>
+
+```swift
+func tableView(UITableView, previewForDismissingContextMenuWithConfiguration: UIContextMenuConfiguration) -> UITargetedPreview?
+```
+: *컨텍스트 메뉴를 닫을 때 대상 뷰를 반환합니다.*
+<br>*Returns the destination view when dismissing a context menu.*
+
+<br>
+
+```swift
+func tableView(UITableView, previewForHighlightingContextMenuWithConfiguration: UIContextMenuConfiguration) -> UITargetedPreview?
+```
+: *생성된 기본 미리 뷰를 재정의하는 뷰를 반환합니다.*
+<br>*Returns a view to override the default preview the table view created.*
+
+<br>
