@@ -208,7 +208,7 @@ func tableView(UITableView, accessoryButtonTappedForRowWith: IndexPath)
 ```swift
 func tableView(UITableView, contextMenuConfigurationForRowAt: IndexPath, point: CGPoint) -> UIContextMenuConfiguration?
 ```
-: *한 지점의 행에 대한 컨텍스트 메뉴 Configuration을 반환합니다.*
+: *한 지점의 행에 대한 context menu Configuration을 반환합니다.*
 <br>*Returns a context menu configuration for the row at a point.*
 
 <br>
@@ -216,7 +216,7 @@ func tableView(UITableView, contextMenuConfigurationForRowAt: IndexPath, point: 
 ```swift
 func tableView(UITableView, previewForDismissingContextMenuWithConfiguration: UIContextMenuConfiguration) -> UITargetedPreview?
 ```
-: *컨텍스트 메뉴를 닫을 때 대상 뷰를 반환합니다.*
+: *context menu를 닫을 때 대상 뷰를 반환합니다.*
 <br>*Returns the destination view when dismissing a context menu.*
 
 <br>
@@ -224,7 +224,51 @@ func tableView(UITableView, previewForDismissingContextMenuWithConfiguration: UI
 ```swift
 func tableView(UITableView, previewForHighlightingContextMenuWithConfiguration: UIContextMenuConfiguration) -> UITargetedPreview?
 ```
-: *생성된 기본 미리 뷰를 재정의하는 뷰를 반환합니다.*
+: *생성된 default preview를 재정의하는 뷰를 반환합니다.*
 <br>*Returns a view to override the default preview the table view created.*
+
+<br>
+
+```swift
+func tableView(UITableView, willDisplayContextMenu: UIContextMenuConfiguration, animator: 
+UIContextMenuInteractionAnimating?)
+```
+: *context menu가 나타날 때 `delegate`에게 알립니다.*
+<br>*Informs the delegate when a context menu will appear.*
+
+<br>
+
+```swift
+func tableView(UITableView, willEndContextMenuInteraction: UIContextMenuConfiguration, animator: UIContextMenuInteractionAnimating?)
+```
+: *context menu가 사라질 때 `delegate`에게 알립니다.*
+<br>*Informs the delegate when a context menu will disappear.*
+
+<br>
+
+```swift
+func tableView(UITableView, willPerformPreviewActionForMenuWith: UIContextMenuConfiguration, animator: UIContextMenuInteractionCommitAnimating)
+```
+: *사용자가 preview를 눌러 커밋을 트리거할 때 `delegate`에게 알립니다.*
+<br>*Informs the delegate when a user triggers a commit by tapping the preview.*
+
+<br>
+<br>
+
+## Responding to Row Actions
+
+```swift
+func tableView(UITableView, leadingSwipeActionsConfigurationForRowAt: IndexPath) -> UISwipeActionsConfiguration?
+```
+: *행의 leading edge에 표시할 swipe action을 반환합니다.*
+<br>*Returns the swipe actions to display on the leading edge of the row.*
+
+<br>
+
+```swift
+func tableView(UITableView, trailingSwipeActionsConfigurationForRowAt: IndexPath) -> UISwipeActionsConfiguration?
+```
+: *행의 trailing edge에 표시할 swipe action을 반환합니다.*
+<br>*Returns the swipe actions to display on the trailing edge of the row.*
 
 <br>
