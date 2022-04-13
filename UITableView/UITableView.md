@@ -272,3 +272,42 @@ func tableView(UITableView, trailingSwipeActionsConfigurationForRowAt: IndexPath
 <br>*Returns the swipe actions to display on the trailing edge of the row.*
 
 <br>
+<br>
+
+## Managing Table View Highlights
+
+```swift
+func tableView(UITableView, shouldHighlightRowAt: IndexPath) -> Bool
+```
+: *지정된 행을 highlight해야 하는지 여부를 `delegate`에게 묻습니다.*
+<br>*Asks the delegate if the specified row should be highlighted.*
+
+<br>
+
+```swift
+func tableView(UITableView, didHighlightRowAt: IndexPath)
+```
+: *지정된 행이 highlight되었음을 `delegate`에게 알립니다.*
+<br>*Tells the delegate that the specified row was highlighted.*
+
+<br>
+
+```swift
+func tableView(UITableView, didUnhighlightRowAt: IndexPath)
+```
+: *지정된 indexPath의 행에서 highlight가 제거되었음을 `delegate`에게 알립니다.*
+<br>*Tells the delegate that the highlight was removed from the row at the specified index path.*
+
+<br>
+<br>
+
+## Editing Table Rows
+
+```swift
+func tableView(UITableView, willBeginEditingRowAt: IndexPath)
+```
+: *테이블 view가 편집 모드로 전환될 것임을 `delegate`에게 알립니다.*
+<br>*Tells the delegate that the table view is about to go into editing mode.*
+
+<br>
+
