@@ -12,7 +12,7 @@
 ```swift
 func tableView(UITableView, willDisplay: UITableViewCell, forRowAt: IndexPath)
 ```
-: *테이블 뷰가 특정 행에 대한 셀을 그리려 한다고 `delegate`에게 알립니다.*
+: *table 뷰가 특정 행에 대한 셀을 그리려 한다고 `delegate`에게 알립니다.*
 <br>*Tells the delegate the table view is about to draw a cell for a particular row.*
 
 
@@ -30,7 +30,7 @@ func tableView(UITableView, indentationLevelForRowAt: IndexPath) -> Int
 ```swift
 func tableView(UITableView, shouldSpringLoadRowAt: IndexPath, with: UISpringLoadedInteractionContext) -> Bool
 ```
-: *테이블에 있는 행의 스프링 로딩 동작을 미세하게 조정할 수 있도록 호출됩니다.*
+: *table에 있는 행의 스프링 로딩 동작을 미세하게 조정할 수 있도록 호출됩니다.*
 <br>*Called to let you fine tune the spring-loading behavior of the rows in a table.*
 
 <br>
@@ -73,7 +73,7 @@ func tableView(UITableView, didDeselectRowAt: IndexPath)
 ```swift
 func tableView(UITableView, shouldBeginMultipleSelectionInteractionAt: IndexPath) -> Bool
 ```
-: *사용자가 two-finger pan gesture를 사용하여 테이블 뷰에서 여러 항목을 선택할 수 있는지 여부를 `delegate`에게 묻습니다.*
+: *사용자가 two-finger pan gesture를 사용하여 table 뷰에서 여러 항목을 선택할 수 있는지 여부를 `delegate`에게 묻습니다.*
 <br>*Asks the delegate whether the user can use a two-finger pan gesture to select multiple items in a table view.*
 
 <br>
@@ -81,7 +81,7 @@ func tableView(UITableView, shouldBeginMultipleSelectionInteractionAt: IndexPath
 ```swift
 func tableView(UITableView, didBeginMultipleSelectionInteractionAt: IndexPath)
 ```
-: *사용자가 테이블 뷰에서 여러 행 선택을 위한 two-finger pan gesture를 사용하기 시작할 때 `delegate`에게 알립니다.*
+: *사용자가 table 뷰에서 여러 행 선택을 위한 two-finger pan gesture를 사용하기 시작할 때 `delegate`에게 알립니다.*
 <br>*Tells the delegate when the user starts using a two-finger pan gesture to select multiple rows in a table view.*
 
 <br>
@@ -89,7 +89,7 @@ func tableView(UITableView, didBeginMultipleSelectionInteractionAt: IndexPath)
 ```swift
 func tableViewDidEndMultipleSelectionInteraction(UITableView)
 ```
-: *사용자가 테이블 뷰에서 여러 행을 선택하기 위해 two-finger pan gesture 사용을 중지할 때 `delegate`에게 알립니다.*
+: *사용자가 table 뷰에서 여러 행을 선택하기 위해 two-finger pan gesture 사용을 중지할 때 `delegate`에게 알립니다.*
 <br>*Tells the delegate when the user stops using a two-finger pan gesture to select multiple rows in a table view.*
 
 <br>
@@ -100,7 +100,7 @@ func tableViewDidEndMultipleSelectionInteraction(UITableView)
 ```swift
 func tableView(UITableView, viewForHeaderInSection: Int) -> UIView?
 ```
-: *테이블 뷰의 지정된 섹션 header에 표시할 뷰를 `delegate`에게 요청합니다.*
+: *table 뷰의 지정된 섹션 header에 표시할 뷰를 `delegate`에게 요청합니다.*
 <br>*Asks the delegate for a view to display in the header of the specified section of the table view.*
 
 <br>
@@ -108,7 +108,7 @@ func tableView(UITableView, viewForHeaderInSection: Int) -> UIView?
 ```swift
 func tableView(UITableView, viewForFooterInSection: Int) -> UIView?
 ```
-: *테이블 뷰의 지정된 섹션 footer에 표시할 뷰를 `delegate`에게 요청합니다.*
+: *table 뷰의 지정된 섹션 footer에 표시할 뷰를 `delegate`에게 요청합니다.*
 <br>*Asks the delegate for a view to display in the footer of the specified section of the table view.*
 
 <br>
@@ -116,7 +116,7 @@ func tableView(UITableView, viewForFooterInSection: Int) -> UIView?
 ```swift
 func tableView(UITableView, willDisplayHeaderView: UIView, forSection: Int)
 ```
-: *테이블이 지정된 섹션에 대한 header 뷰를 표시하려고 함을 `delegate`에게 알립니다.*
+: *table이 지정된 섹션에 대한 header 뷰를 표시하려고 함을 `delegate`에게 알립니다.*
 <br>*Tells the delegate that the table is about to display the header view for the specified section.*
 
 <br>
@@ -124,7 +124,7 @@ func tableView(UITableView, willDisplayHeaderView: UIView, forSection: Int)
 ```swift
 func tableView(UITableView, willDisplayFooterView: UIView, forSection: Int)
 ```
-: *테이블에 지정된 섹션에 대한 footer 뷰가 표시될 것임을 `delegate`에게 알립니다.*
+: *table에 지정된 섹션에 대한 footer 뷰가 표시될 것임을 `delegate`에게 알립니다.*
 <br>*Tells the delegate that the table is about to display the footer view for the specified section.*
 
 <br>
@@ -306,8 +306,41 @@ func tableView(UITableView, didUnhighlightRowAt: IndexPath)
 ```swift
 func tableView(UITableView, willBeginEditingRowAt: IndexPath)
 ```
-: *테이블 view가 편집 모드로 전환될 것임을 `delegate`에게 알립니다.*
+: *table view가 편집 모드로 전환될 것임을 `delegate`에게 알립니다.*
 <br>*Tells the delegate that the table view is about to go into editing mode.*
 
+<br>
+
+```swift
+func tableView(UITableView, didEndEditingRowAt: IndexPath?)
+```
+: *table view가 편집 모드를 종료했음을 `delegate`에게 알립니다.*
+<br>*Tells the delegate that the table view has left editing mode.*
+
+<br>
+
+```swift
+func tableView(UITableView, editingStyleForRowAt: IndexPath) -> UITableViewCell.EditingStyle
+```
+: *table view의 특정 위치에 있는 행의 편집 스타일을 `delegate`에게 요청합니다.*
+<br>*Asks the delegate for the editing style of a row at a particular location in a table view.*
+
+<br>
+
+```swift
+func tableView(UITableView, titleForDeleteConfirmationButtonForRowAt: IndexPath) -> String?
+```
+: *삭제 확인 버튼의 기본 제목을 변경합니다.*
+<br>*Changes the default title of the delete-confirmation button.*
+
+<br>
+
+```swift
+func tableView(UITableView, shouldIndentWhileEditingRowAt: IndexPath) -> Bool
+```
+: *table view가 편집 모드에 있는 동안 지정된 행의 배경을 들여써야 하는지 여부를 `delegate`에게 묻습니다.*
+<br>Asks the delegate whether the background of the specified row should be indented while the table view is in editing mode.
+
+<br>
 <br>
 
