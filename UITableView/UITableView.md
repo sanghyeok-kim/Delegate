@@ -344,3 +344,40 @@ func tableView(UITableView, shouldIndentWhileEditingRowAt: IndexPath) -> Bool
 <br>
 <br>
 
+## Reordering Table Rows
+
+```swift
+func tableView(UITableView, targetIndexPathForMoveFromRowAt: IndexPath, toProposedIndexPath: IndexPath) -> IndexPath
+```
+: *`delegate`에게 제안된 행 이동의 대상을 변경하기 위해 새 indexPath를 반환하도록 요청합니다.*
+<br>*Asks the delegate to return a new index path to retarget a proposed move of a row.
+
+
+<br>
+<br>
+
+## Tracking the Removal of Views
+
+```swift
+func tableView(UITableView, didEndDisplaying: UITableViewCell, forRowAt: IndexPath)
+```
+: *지정된 셀이 테이블에서 제거되었음을 `delegate`에게 알립니다.*
+<br>*Tells the delegate that the specified cell was removed from the table.*
+
+<br>
+
+```swift
+func tableView(UITableView, didEndDisplayingHeaderView: UIView, forSection: Int)
+```
+: *지정된 header view가 테이블에서 제거되었음을 `delegate`에게 알립니다.*
+<br>*Tells the delegate that the specified header view was removed from the table.*
+
+<br>
+
+```swift
+func tableView(UITableView, didEndDisplayingFooterView: UIView, forSection: Int)
+```
+: *지정된 footer view가 테이블에서 제거되었음을 `delegate`에게 알립니다.*
+<br>*Tells the delegate that the specified footer view was removed from the table.*
+
+<br>
