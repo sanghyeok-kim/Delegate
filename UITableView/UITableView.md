@@ -381,3 +381,39 @@ func tableView(UITableView, didEndDisplayingFooterView: UIView, forSection: Int)
 <br>*Tells the delegate that the specified footer view was removed from the table.*
 
 <br>
+<br>
+
+## Managing Table View Focus
+
+```swift
+func tableView(UITableView, canFocusRowAt: IndexPath) -> Bool
+```
+: *지정된 indexPath에 있는 셀 자체가 포커스 가능한지 여부를 `delegate`에게 묻습니다.*
+<br>*Asks the delegate whether the cell at the specified index path is itself focusable.*
+
+<br>
+
+```swift
+func tableView(UITableView, shouldUpdateFocusIn: UITableViewFocusUpdateContext) -> Bool
+```
+: *컨텍스트에서 지정한 포커스 업데이트가 허용되는지 여부를 `delegate`에게 묻습니다.*
+<br>*Asks the delegate whether the focus update specified by the context is allowed to occur.*
+
+<br>
+
+```swift
+func tableView(UITableView, didUpdateFocusIn: UITableViewFocusUpdateContext, with: UIFocusAnimationCoordinator)
+```
+: *컨텍스트에서 지정한 포커스 업데이트가 방금 발생했음을 `delegate`에게 알립니다*
+<br>*Tells the delegate that a focus update specified by the context has just occurred.*
+
+<br>
+
+```swift
+func indexPathForPreferredFocusedView(in: UITableView) -> IndexPath?
+```
+: *선호하는 포커스 view에 대한 테이블 view의 indexPath를 `delegate`에게 요청합니다*
+<br>*Asks the delegate for the table view’s index path for the preferred focused view.*
+
+<br>
+<br>
