@@ -417,3 +417,11 @@ func indexPathForPreferredFocusedView(in: UITableView) -> IndexPath?
 
 <br>
 <br>
+
+## Instance Methods
+
+```swift
+func tableView(UITableView, selectionFollowsFocusForRowAt: IndexPath) -> Bool
+```
+: *해당 indexPath에서 행에 대한 선택 및 포커스 동작을 관련시킬지 여부를 `delegate`에게 묻습니다.*
+<br>*Asks the delegate whether to relate selection and focus behavior for the row at the corresponding index path.*
