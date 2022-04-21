@@ -42,3 +42,24 @@ func collectionView(UICollectionView, didDeselectItemAt: IndexPath)
 
 <br>
 
+```swift
+func collectionView(UICollectionView, shouldBeginMultipleSelectionInteractionAt: IndexPath) -> Bool
+```
+: *사용자가 CollectionView에서 two-finger pan gesture를 사용하여 여러 item을 선택할 수 있는지 `delegate`에게 묻습니다.*
+<br>*Asks the delegate whether the user can select multiple items using a two-finger pan gesture in a collection view.*
+
+<br>
+
+```swift
+func collectionView(UICollectionView, didBeginMultipleSelectionInteractionAt: IndexPath)
+```
+: *사용자가 CollectionView에서 여러 item을 선택하기 위해 two-finger pan gesture를 사용하기 시작할 때 `delegate`에게 알립니다.*
+<br>*Tells the delegate when the user starts using a two-finger pan gesture to select multiple items in a collection view.*
+
+<br>
+
+```swift
+func collectionViewDidEndMultipleSelectionInteraction(UICollectionView)
+```
+: *사용자가 CollectionView에서 여러 item을 선택하기 위해 two-finger pan gesture 사용을 중지할 때 `delegate`에게 알립니다.*
+<br>*Tells the delegate when the user stops using a two-finger pan gesture to select multiple items in a collection view.*
