@@ -129,3 +129,22 @@ func collectionView(UICollectionView, didEndDisplayingSupplementaryView: UIColle
 
 <br>
 <br>
+
+## Handling Layout Changes
+
+```swift
+func collectionView(UICollectionView, transitionLayoutForOldLayout: UICollectionViewLayout, newLayout: UICollectionViewLayout) -> UICollectionViewTransitionLayout
+```
+: *지정된 레이아웃 사이를 이동할 때 사용할 custom transition layout을 요청합니다.*
+<br>*Asks for the custom transition layout to use when moving between the specified layouts.*
+
+<br>
+
+```swift
+func collectionView(UICollectionView, targetContentOffsetForProposedContentOffset: CGPoint) -> CGPoint
+```
+: *`delegate`에게 레이아웃 변경 및 애니메이션 업데이트에 대한 content offset을 customzie할 수 있는 기회를 제공합니다.*
+<br>*Gives the delegate an opportunity to customize the content offset for layout changes and animated updates.*
+
+<br>
+<br>
