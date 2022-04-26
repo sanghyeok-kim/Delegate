@@ -148,3 +148,37 @@ func collectionView(UICollectionView, targetContentOffsetForProposedContentOffse
 
 <br>
 <br>
+
+## Managing Context Menus
+
+```swift
+func collectionView(UICollectionView, contextMenuConfigurationForItemAt: IndexPath, point: CGPoint) -> UIContextMenuConfiguration?
+```
+: *한 지점의 item에 대한 context menu configuration을 반환합니다.*
+<br>*Returns a context menu configuration for the item at a point.*
+
+<br>
+
+```swift
+func collectionView(UICollectionView, previewForDismissingContextMenuWithConfiguration: UIContextMenuConfiguration) -> UITargetedPreview?
+```
+: *context menu를 닫을 때 destination view를 반환합니다.*
+<br>*Returns the destination view when dismissing a context menu.*
+
+<br>
+
+```swift
+func collectionView(UICollectionView, previewForHighlightingContextMenuWithConfiguration: UIContextMenuConfiguration) -> UITargetedPreview?
+```
+: *collection view가 생성한 default preview를 override하는 view를 반환합니다.*
+<br>*Returns a view to override the default preview the collection view created.*
+
+<br>
+
+```swift
+func collectionView(UICollectionView, willDisplayContextMenu: UIContextMenuConfiguration, animator: UIContextMenuInteractionAnimating?)
+```
+: *context menu가 나타날 것이라고 `delegate`에게 알립니다.*
+<br>*Informs the delegate when a context menu will appear.*
+
+<br>
