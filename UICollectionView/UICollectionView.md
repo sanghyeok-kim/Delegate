@@ -182,3 +182,40 @@ func collectionView(UICollectionView, willDisplayContextMenu: UIContextMenuConfi
 <br>*Informs the delegate when a context menu will appear.*
 
 <br>
+
+```swift
+func collectionView(UICollectionView, willEndContextMenuInteraction: UIContextMenuConfiguration, animator: UIContextMenuInteractionAnimating?)
+```
+: *context menu가 사라질 때 `delegate`에게 알립니다.*
+<br>*Informs the delegate when a context menu will disappear.*
+
+
+<br>
+
+```swift
+func collectionView(UICollectionView, willPerformPreviewActionForMenuWith: UIContextMenuConfiguration, animator: UIContextMenuInteractionCommitAnimating)
+```
+: *사용자가 preview를 눌러 커밋을 트리거할 때 `delegate`에게 알립니다.*
+<br>*Informs the delegate when a user triggers a commit by tapping the preview.*
+
+<br>
+<br>
+
+## Managing Focus in a Collection View
+
+```swift
+func collectionView(UICollectionView, canFocusItemAt: IndexPath) -> Bool
+```
+: *지정된 indexPath에 있는 항목에 focus를 둘 수 있는지 여부를 `delegate`에게 묻습니다.*
+<br>*Asks the delegate whether the item at the specified index path can be focused.*
+
+
+<br>
+
+```swift
+func indexPathForPreferredFocusedView(in: UICollectionView) -> IndexPath?
+```
+: *focus해야 하는 cell의 indexPath를 `delegate`에게 요청합니다.*
+<br>*Asks the delegate for the index path of the cell that should be focused.*
+
+<br>
