@@ -206,9 +206,8 @@ func collectionView(UICollectionView, willPerformPreviewActionForMenuWith: UICon
 ```swift
 func collectionView(UICollectionView, canFocusItemAt: IndexPath) -> Bool
 ```
-: *지정된 indexPath에 있는 항목에 focus를 둘 수 있는지 여부를 `delegate`에게 묻습니다.*
+: *지정된 indexPath에 있는 item에 focus를 둘 수 있는지 여부를 `delegate`에게 묻습니다.*
 <br>*Asks the delegate whether the item at the specified index path can be focused.*
-
 
 <br>
 
@@ -219,3 +218,51 @@ func indexPathForPreferredFocusedView(in: UICollectionView) -> IndexPath?
 <br>*Asks the delegate for the index path of the cell that should be focused.*
 
 <br>
+
+```swift
+func collectionView(UICollectionView, shouldUpdateFocusIn: UICollectionViewFocusUpdateContext) -> Bool
+```
+: *focus 변경이 발생해야 하는지 여부를 `delegate`에게 묻습니다.*
+<br>*Asks the delegate whether a change in focus should occur.*
+
+<br>
+
+```swift
+func collectionView(UICollectionView, didUpdateFocusIn: UICollectionViewFocusUpdateContext, with: UIFocusAnimationCoordinator)
+```
+: *focus 업데이트가 발생했음을 `delegate`에게 알립니다.*
+<br>*Tells the delegate that a focus update occurred.*
+
+<br>
+<br>
+
+## Editing Items
+
+```swift
+func collectionView(UICollectionView, canEditItemAt: IndexPath) -> Bool
+```
+: *지정된 item을 편집할 수 있는지 여부를 결정합니다.*
+<br>*Determines whether the specified item is editable.*
+
+<br>
+<br>
+
+## Controlling the Spring-Loading Behavior
+
+```swift
+func collectionView(UICollectionView, shouldSpringLoadItemAt: IndexPath, with: UISpringLoadedInteractionContext) -> Bool
+```
+: *지정된 item에 대해 spring-loading 상호작용 효과가 표시되는지 여부를 결정합니다.*
+*<br>Determines whether the spring-loading interaction effect is displayed *for the specified item.*
+
+<br>
+<br>
+
+
+
+
+
+
+
+
+
