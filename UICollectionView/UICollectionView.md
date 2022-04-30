@@ -258,7 +258,21 @@ func collectionView(UICollectionView, shouldSpringLoadItemAt: IndexPath, with: U
 <br>
 <br>
 
+## Instance Methods
 
+```swift
+func collectionView(UICollectionView, selectionFollowsFocusForItemAt: IndexPath) -> Bool
+```
+: *해당 indexPath에서 cell에 대한 선택 및 focus 동작을 관련시킬지 여부를 `delegate`에게 묻습니다.*
+<br>*Asks the delegate whether to relate selection and focus behavior for the cell at the corresponding index path.*
+
+<br>
+
+```swift
+func collectionView(UICollectionView, targetIndexPathForMoveOfItemFromOriginalIndexPath: IndexPath, atCurrentIndexPath: IndexPath, toProposedIndexPath: IndexPath) -> IndexPath
+```
+: *cell을 이동할 때 사용할 indexPath를 `delegate`에게 요청합니다.*
+<br>*Asks the delegate for the index path to use when moving an item.*
 
 
 
