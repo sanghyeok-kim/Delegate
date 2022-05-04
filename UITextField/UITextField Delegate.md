@@ -1,11 +1,15 @@
 # `UITextField` - [Document](https://developer.apple.com/documentation/uikit/uitextfield)
 
 
+<br>
+
 
 # `UITextFieldDelegate` - [Document](https://developer.apple.com/documentation/uikit/uitextfielddelegate)
 
 - `required` : *없음*
 
+
+<br>
 
 
 ## Managing Editing
@@ -21,6 +25,8 @@ func textFieldShouldBeginEditing(UITextField) -> Bool
   - `false` 반환시 텍스트 필드 편집 불가능(커서 나타나지 않음)
 
 
+<br>
+
 
 ```swift
 func textFieldDidBeginEditing(UITextField)
@@ -29,6 +35,8 @@ func textFieldDidBeginEditing(UITextField)
 *Tells the delegate when editing begins in the specified text field.*
 - 텍스트 필드 편집이 시작된 후(텍스트 필드가 `FirstResponder`가 된 후)에 실행됨
 
+
+<br>
 
 
 ```swift
@@ -40,6 +48,8 @@ func textFieldShouldEndEditing(UITextField) -> Bool
 - `false` 반환시 현재 편집중인 텍스트 필드의 편집을 중단할 수 없음(커서 사라지지 않음)
   - 따라서 다른 텍스트 필드를 선택해도 해당 텍스트 필드를 편집할 수 없음(현재 편집중인 텍스트 필드만을 편집 가능)
 
+
+<br>
 
 
 ```swift
@@ -56,6 +66,8 @@ func textFieldDidEndEditing(UITextField, reason: UITextFieldDidEndEditingReason)
     *Constants that indicate the reason for ending editing in a text field.*
 
 
+<br>
+
 
 ```swift
 func textFieldDidEndEditing(UITextField)
@@ -65,6 +77,8 @@ func textFieldDidEndEditing(UITextField)
 - 텍스트 필드 편집이 끝났을 때(다른 텍스트 필드를 선택했을 때 등) 실행됨
 
 
+<br>
+<br>
 
 
 ## Editing the Text Field's Text
@@ -80,6 +94,8 @@ func textField(UITextField, shouldChangeCharactersIn: NSRange, replacementString
   - `false` 반환시 기존 텍스트를 유지 
 
 
+<br>
+
 
 ```swift
 func textFieldShouldClear(UITextField) -> Bool
@@ -90,6 +106,8 @@ func textFieldShouldClear(UITextField) -> Bool
 - `built-in clear button`을 눌렀을 때 실행됨
   - `built-in clear button`은 default로 제공되지 않으며, textField의 `clearButtonMode` 속성을 통해 설정 가능
 
+
+<br>
 
 
 ```swift
@@ -104,6 +122,7 @@ func textFieldShouldReturn(UITextField) -> Bool
   (`return` 키가 눌러진 텍스트 필드의 `FirstResponder`를 해제)
 
 
+<br>
 
 
 ## Managing Text Selection
