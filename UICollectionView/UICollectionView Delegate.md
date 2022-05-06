@@ -310,7 +310,7 @@ func collectionView(UICollectionView, canEditItemAt: IndexPath) -> Bool
 func collectionView(UICollectionView, shouldSpringLoadItemAt: IndexPath, with: UISpringLoadedInteractionContext) -> Bool
 ```
 :*지정된 item에 대해 spring-loading 상호작용 효과가 표시되는지 여부를 결정합니다.*
-<br>*Determines whether the spring-loading interaction effect is displayed *for the specified item.*
+<br>*Determines whether the spring-loading interaction effect is displayed for the specified item.*
 
 
 <br>
