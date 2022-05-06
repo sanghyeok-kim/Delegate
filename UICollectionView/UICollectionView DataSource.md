@@ -53,7 +53,7 @@ func numberOfSections(in: UICollectionView) -> Int
 func collectionView(UICollectionView, cellForItemAt: IndexPath) -> UICollectionViewCell
 ```
 : *collectionView에서 지정된 item에 해당하는 cell에 대해 `dataSource`에 요청합니다.*
-<br>*Asks your data source object for the cell that corresponds to the specified item in the collection view.
+<br>*Asks your data source object for the cell that corresponds to the specified item in the collection view.*
 
 
 <br>
