@@ -64,3 +64,47 @@ func collectionView(UICollectionView, viewForSupplementaryElementOfKind: String,
 ```
 : *collectionView에 표시할 supplementary view를 제공하도록 `dataSource`에 요청합니다.*
 <br>*Asks your data source object to provide a supplementary view to display in the collection view.*
+
+
+<br>
+<br>
+
+
+## Reordering Items
+```swift
+func collectionView(UICollectionView, canMoveItemAt: IndexPath) -> Bool
+```
+: *지정된 item을 collectionView의 다른 위치로 이동할 수 있는지 여부를 `dataSource`에 묻습니다.*
+<br>*Asks your data source object whether the specified item can be moved to another location in the collection view.*
+
+
+<br>
+
+
+```swift
+func collectionView(UICollectionView, moveItemAt: IndexPath, to: IndexPath)
+```
+: *`dataSource`에 지정된 item을 새 위치로 이동하도록 지시합니다.*
+<br>*Tells your data source object to move the specified item to its new location.*
+
+
+<br>
+<br>
+
+
+## Configuring an Index
+```swift
+func indexTitles(for: UICollectionView) -> [String]?
+```
+: *collectionView에 표시할 index item들의 title 배열을 반환하도록 `dataSource`에 요청합니다.*
+<br>*Asks the data source to return the titles for the index items to display for the collection view.*
+
+
+<br>
+
+
+```swift
+func collectionView(UICollectionView, indexPathForIndexTitle: String, at: Int) -> IndexPath
+```
+: *index 목록 중 하나에 해당하는 collectionView item의 indexPath를 반환하도록 `dataSource`에 요청합니다.*
+<br>*Asks the data source to return the index path of a collection view item that corresponds to one of your index entries.*
