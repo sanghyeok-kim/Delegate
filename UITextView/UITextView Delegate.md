@@ -89,3 +89,31 @@ func textViewDidChangeSelection(UITextView)
 
 
 ## Interacting with Text Data
+
+```swift
+func textView(UITextView, shouldInteractWith: NSTextAttachment, in: NSRange, interaction: UITextItemInteraction) -> Bool
+```
+: *textView가 특정 텍스트 범위에서 '지정된 텍스트'와 '지정된 유형의 사용자 상호 작용'을 허용하는지 여부를 `delegate`에게 묻습니다.*
+<br>*Asks the delegate whether the specified text view allows the specified type of user interaction with the provided text attachment in the specified range of text.*
+
+
+<br>
+
+
+```swift
+func textView(UITextView, shouldInteractWith: URL, in: NSRange, interaction: UITextItemInteraction) -> Bool
+```
+: *textView가 특정 텍스트 범위에서 '지정된 URL'과 '지정된 유형의 사용자 상호 작용'을 허용하는지 여부를 `delegate`에게 묻습니다.*
+<br>*Asks the delegate whether the specified text view allows the specified type of user interaction with the specified URL in the specified range of text.*
+
+
+<br>
+<br>
+
+
+## Constants
+```swift
+enum UITextItemInteraction
+```
+: *사용자가 텍스트 또는 URL과 할 수 있는 '상호 작용 유형'을 나타내는 상수입니다.*
+<br>*Constants that indicate the type of interaction the user expects to have with a URL or text attachment.*
