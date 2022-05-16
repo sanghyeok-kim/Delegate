@@ -51,10 +51,45 @@ func scrollViewDidEndDragging(UIScrollView, willDecelerate: Bool)
 
 ## Managing Zooming
 
+```swift
+func viewForZooming(in: UIScrollView) -> UIView?
+```
+: *scrollView에서 확대/축소가 발생하려고 할 때 뷰의 크기를 조정하도록 `delegate`에게 요청합니다.*
+<br>*Asks the delegate for the view to scale when zooming is about to occur in the scroll view.*
+
+
+<br>
+
+
+```swift
+func scrollViewWillBeginZooming(UIScrollView, with: UIView?)
+```
+: *scrollView에서 콘텐츠 확대/축소가 시작되려고 함을 `delegate`에게 알립니다.*
+<br>*Tells the delegate that zooming of the content in the scroll view is about to commence.*
+
+
+<br>
+
+
+```swift
+func scrollViewDidEndZooming(UIScrollView, with: UIView?, atScale: CGFloat)
+```
+: *scrollView에서 콘텐츠 확대/축소가 완료되면 `delegate`에게 알립니다.*
+<br>*Tells the delegate when zooming of the content in the scroll view completed.*
+
+
+<br>
+
+
+```swift
+func scrollViewDidZoom(UIScrollView)
+```
+: *`delegate`에게 scrollView의 확대/축소 비율이 변경되었음을 알립니다.*
+<br>*Tells the delegate that the scroll view’s zoom factor changed.*
+
 
 <br>
 <br>
-
 
 ## Responding to Scrolling Animations
 
