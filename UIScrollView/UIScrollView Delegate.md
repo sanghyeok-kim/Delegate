@@ -93,6 +93,11 @@ func scrollViewDidZoom(UIScrollView)
 
 ## Responding to Scrolling Animations
 
+```swift
+func scrollViewDidEndScrollingAnimation(UIScrollView)
+```
+: *scrollView의 스크롤 애니메이션이 종료되면 delegate에게 알립니다.*
+<br>*Tells the delegate when a scrolling animation in the scroll view concludes.*
 
 <br>
 <br>
