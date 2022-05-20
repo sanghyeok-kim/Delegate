@@ -104,3 +104,8 @@ func scrollViewDidEndScrollingAnimation(UIScrollView)
 
 
 ## Responding to Inset Changes
+```swift
+func scrollViewDidChangeAdjustedContentInset(UIScrollView)
+```
+: *scrollView의 inset 값이 변경될 때 호출됩니다.*
+<br>*Called when the scroll view's inset values changed.*
