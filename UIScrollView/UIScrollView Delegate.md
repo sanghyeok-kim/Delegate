@@ -17,16 +17,18 @@
 ```swift
 func scrollViewDidScroll(UIScrollView)
 ```
-: *사용자가 receiver 내에서 contentView를 스크롤할 때 `delegate`에게 알립니다*
+: *사용자가 contentView를 스크롤할 때 `delegate`에게 알립니다*
 <br>*Tells the delegate when the user scrolls the content view within the receiver.*
+- 스크롤될 때 마다 계속 실행됨
 
 <br>
 
 ```swift
 func scrollViewWillBeginDragging(UIScrollView)
 ```
-: *scrollView가 콘텐츠 스크롤을 시작하려고 할 때 `delegate`에게 알립니다.*
+: *scrollView가 스크롤을 시작하려고 할 때 `delegate`에게 알립니다.*
 <br>*Tells the delegate when the scroll view is about to start scrolling the content.*
+- 손을 댄 상태에서 드래그하기 시작할 때 1회 호출됨
 
 <br>
 
@@ -35,6 +37,8 @@ func scrollViewWillEndDragging(UIScrollView, withVelocity: CGPoint, targetConten
 ```
 : *사용자가 콘텐츠 스크롤을 마치면 `delegate`에게 알립니다.*
 <br>*Tells the delegate when the user finishes scrolling the content.*
+- 드래그 한 후 손을 땔 때 1회 호출됨
+- 땠을 때의 속도와 방향을 `velocity`로 알려줌
 
 <br>
 
@@ -43,7 +47,10 @@ func scrollViewDidEndDragging(UIScrollView, willDecelerate: Bool)
 ```
 : *scrollView에서 드래그가 끝날 때 `delegate`에게 알립니다.*
 <br>*Tells the delegate when dragging ended in the scroll view.*
-
+- 드래그 한 후 손을 땔 때 1회 호출됨
+- scrollView의 스크롤 모션 감속 여부를 `decelerate`로 알려줌
+    - 손을 땐 순간 스크롤뷰가 감속해야한다면 true로 반환
+    - 손을 땐 순간 스크롤뷰가 이미 멈춰있다면 false를 반환
 
 <br>
 <br>
