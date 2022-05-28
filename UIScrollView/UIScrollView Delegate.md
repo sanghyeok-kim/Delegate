@@ -1,4 +1,4 @@
-# `UIScorllView` - [Document](https://developer.apple.com/documentation/uikit/uiscrollview)
+# `UIScrollView` - [Document](https://developer.apple.com/documentation/uikit/uiscrollview)
 
 
 <br>
@@ -17,7 +17,7 @@
 ```swift
 func scrollViewDidScroll(UIScrollView)
 ```
-: *사용자가 contentView를 스크롤할 때 `delegate`에게 알립니다*
+: *사용자가 contentView를 스크롤할 때 `delegate`에게 알립니다.*
 <br>*Tells the delegate when the user scrolls the content view within the receiver.*
 - 스크롤될 때 마다 계속 실행됨
 
@@ -51,6 +51,7 @@ func scrollViewDidEndDragging(UIScrollView, willDecelerate: Bool)
 - scrollView의 스크롤 모션 감속 여부를 `decelerate`로 알려줌
     - 손을 땐 순간 스크롤뷰가 감속해야한다면 true로 반환
     - 손을 땐 순간 스크롤뷰가 이미 멈춰있다면 false를 반환
+
 
 <br>
 <br>
