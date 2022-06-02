@@ -36,6 +36,33 @@ func pickerView(UIPickerView, widthForComponent: Int) -> CGFloat
 
 
 ## Setting the Content of Component Rows
+*The methods in this group are marked @optional. However, to use a picker view, you must implement either the pickerView(_:titleForRow:forComponent:) or the pickerView(_:viewForRow:forComponent:reusing:) method to provide the content of component rows.*
+
+```swift
+func pickerView(UIPickerView, titleForRow: Int, forComponent: Int) -> String?
+```
+: *주어진 구성 요소의 주어진 행에 사용할 title이 필요할 때 pickerView에 의해 호출됩니다.*
+<br>*Called by the picker view when it needs the title to use for a given row in a given component.*
+
+
+<br>
+
+
+```swift
+func pickerView(UIPickerView, attributedTitleForRow: Int, forComponent: Int) -> NSAttributedString?
+```
+: *지정된 구성 요소의 지정된 행에 사용할 스타일이 지정된 title이 필요할 때 pickerView에 의해 호출됩니다.*
+<br>*Called by the picker view when it needs the styled title to use for a given row in a given component.*
+
+
+<br>
+
+
+```swift
+func pickerView(UIPickerView, viewForRow: Int, forComponent: Int, reusing: UIView?) -> UIView
+```
+: *주어진 컴포넌트의 주어진 행 사용에 필요한 뷰가 있을 때 pickerView에 의해 호출됩니다.*
+<br>*Called by the picker view when it needs the view to use for a given row in a given component.*
 
 
 <br>
