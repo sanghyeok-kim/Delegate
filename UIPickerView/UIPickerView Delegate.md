@@ -70,3 +70,9 @@ func pickerView(UIPickerView, viewForRow: Int, forComponent: Int, reusing: UIVie
 
 
 ## Responding to Row Selection
+
+```swift
+func pickerView(UIPickerView, didSelectRow: Int, inComponent: Int)
+```
+: *사용자가 구성 요소에서 행을 선택할 때 pickerView에서 호출됩니다.*
+*Called by the picker view when the user selects a row in a component.*
