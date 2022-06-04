@@ -4,7 +4,7 @@
 <br>
 
 
-# `UIPickerView` - [Document](https://developer.apple.com/documentation/uikit/uipickerviewdelegate)
+# `UIPickerViewDelegate` - [Document](https://developer.apple.com/documentation/uikit/uipickerviewdelegate)
 
 - `required` : *없음*
 
