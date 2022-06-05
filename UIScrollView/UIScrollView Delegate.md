@@ -4,7 +4,7 @@
 <br>
 
 
-# `UIScrollView` - [Document](https://developer.apple.com/documentation/uikit/uiscrollviewdelegate)
+# `UIScrollViewDelegate` - [Document](https://developer.apple.com/documentation/uikit/uiscrollviewdelegate)
 
 - `required` : *없음*
 
