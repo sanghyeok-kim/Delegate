@@ -264,7 +264,7 @@ func tableView(UITableView, contextMenuConfigurationForRowAt: IndexPath, point: 
 ```swift
 func tableView(UITableView, previewForDismissingContextMenuWithConfiguration: UIContextMenuConfiguration) -> UITargetedPreview?
 ```
-: *context menu를 닫을 때 대상 뷰를 반환합니다.*
+: *context menu를 dismiss할 때 destination 뷰를 반환합니다.*
 <br>*Returns the destination view when dismissing a context menu.*
 
 
