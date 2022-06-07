@@ -50,7 +50,7 @@ func numberOfSections(in: UITableView) -> Int
 ```swift
 func tableView(UITableView, cellForRowAt: IndexPath) -> UITableViewCell
 ```
-: *`delegate`의 특정 위치에 삽입할 cell에 대한 dataSource를 요청합니다.*
+: *특정 위치에 삽입할 cell에 대한 dataSource를 요청합니다.*
 <br>*Asks the data source for a cell to insert in a particular location of the table view.*
 
 
@@ -60,7 +60,7 @@ func tableView(UITableView, cellForRowAt: IndexPath) -> UITableViewCell
 ```swift
 func tableView(UITableView, titleForHeaderInSection: Int) -> String?
 ```
-: *`delegate`의 지정된 section header title에 대한 dataSource를 요청합니다.*
+: *지정된 section header title에 대한 dataSource를 요청합니다.*
 <br>*Asks the data source for the title of the header of the specified section of the table view.*
 
 
@@ -70,7 +70,7 @@ func tableView(UITableView, titleForHeaderInSection: Int) -> String?
 ```swift
 func tableView(UITableView, titleForFooterInSection: Int) -> String?
 ```
-: *`delegate`의 지정된 section footer title에 대한 dataSource를 요청합니다.*
+: *지정된 section footer title에 대한 dataSource를 요청합니다.*
 <br>*Asks the data source for the title of the footer of the specified section of the table view.*
 
 
