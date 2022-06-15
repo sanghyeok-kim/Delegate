@@ -41,7 +41,7 @@ func pickerView(UIPickerView, widthForComponent: Int) -> CGFloat
 ```swift
 func pickerView(UIPickerView, titleForRow: Int, forComponent: Int) -> String?
 ```
-: *주어진 구성 요소의 주어진 행에 사용할 title이 필요할 때 pickerView에 의해 호출됩니다.*
+: *주어진 구성 요소의 주어진 row에 사용할 title이 필요할 때 pickerView에 의해 호출됩니다.*
 <br>*Called by the picker view when it needs the title to use for a given row in a given component.*
 
 
@@ -51,7 +51,7 @@ func pickerView(UIPickerView, titleForRow: Int, forComponent: Int) -> String?
 ```swift
 func pickerView(UIPickerView, attributedTitleForRow: Int, forComponent: Int) -> NSAttributedString?
 ```
-: *지정된 구성 요소의 지정된 행에 사용할 스타일이 지정된 title이 필요할 때 pickerView에 의해 호출됩니다.*
+: *지정된 구성 요소의 지정된 row에 사용할 스타일이 지정된 title이 필요할 때 pickerView에 의해 호출됩니다.*
 <br>*Called by the picker view when it needs the styled title to use for a given row in a given component.*
 
 
@@ -61,7 +61,7 @@ func pickerView(UIPickerView, attributedTitleForRow: Int, forComponent: Int) -> 
 ```swift
 func pickerView(UIPickerView, viewForRow: Int, forComponent: Int, reusing: UIView?) -> UIView
 ```
-: *주어진 컴포넌트의 주어진 행 사용에 필요한 뷰가 있을 때 pickerView에 의해 호출됩니다.*
+: *주어진 컴포넌트의 주어진 row 사용에 필요한 뷰가 있을 때 pickerView에 의해 호출됩니다.*
 <br>*Called by the picker view when it needs the view to use for a given row in a given component.*
 
 
@@ -74,5 +74,5 @@ func pickerView(UIPickerView, viewForRow: Int, forComponent: Int, reusing: UIVie
 ```swift
 func pickerView(UIPickerView, didSelectRow: Int, inComponent: Int)
 ```
-: *사용자가 구성 요소에서 행을 선택할 때 pickerView에서 호출됩니다.*
+: *사용자가 구성 요소에서 row를 선택할 때 pickerView에서 호출됩니다.*
 *Called by the picker view when the user selects a row in a component.*
