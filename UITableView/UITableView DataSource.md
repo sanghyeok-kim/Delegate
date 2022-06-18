@@ -10,7 +10,7 @@
     -   ```swift
         func tableView(UITableView, numberOfRowsInSection: Int) -> Int
         ```
-        : *tableView의 지정된 section에 있는 row 수를 반환하도록 `dataSource`에 지시합니다*
+        : *tableView의 지정된 section에 있는 행의 수를 반환하도록 `dataSource`에 지시합니다*
         <br>*Tells the data source to return the number of rows in a given section of a table view.*
     
     -   ```swift
@@ -28,7 +28,7 @@
 ```swift
 func tableView(UITableView, numberOfRowsInSection: Int) -> Int
 ```
-: *tableView의 지정된 section에 있는 row 수를 반환하도록 `dataSource`에 지시합니다*
+: *tableView의 지정된 section에 있는 행의 수를 반환하도록 `dataSource`에 지시합니다*
 <br>*Tells the data source to return the number of rows in a given section of a table view.*
 
 
@@ -38,7 +38,7 @@ func tableView(UITableView, numberOfRowsInSection: Int) -> Int
 ```swift
 func numberOfSections(in: UITableView) -> Int
 ```
-: *`dataSource`에 tableView의 section 수를 반환하도록 요청합니다.*
+: *`dataSource`에 tableView의 section의 수를 반환하도록 요청합니다.*
 <br>*Asks the data source to return the number of sections in the table view.*
 
 
