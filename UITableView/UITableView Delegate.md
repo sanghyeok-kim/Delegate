@@ -507,7 +507,7 @@ func tableView(UITableView, didUpdateFocusIn: UITableViewFocusUpdateContext, wit
 ```swift
 func indexPathForPreferredFocusedView(in: UITableView) -> IndexPath?
 ```
-: *선호하는 포커스 view에 대한 테이블 view의 indexPath를 `delegate`에게 요청합니다*
+: *선호하는 포커스 view에 대한 tableView의 indexPath를 `delegate`에게 요청합니다*
 <br>*Asks the delegate for the table view’s index path for the preferred focused view.*
 
 
