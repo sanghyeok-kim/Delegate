@@ -53,3 +53,19 @@ class let didFinishLaunchingNotification: NSNotification.Name
 
 
 ## Configuring and Discarding Scenes
+
+```swift
+func application(UIApplication, configurationForConnecting: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration
+```
+: *새로운 Scene을 만들 때 사용할 UIKit의 구성 데이터를 검색합니다.*
+<br>*Retrieves the configuration data for UIKit to use when creating a new scene.*
+
+
+<br>
+
+```swift
+func application(UIApplication, didDiscardSceneSessions: Set<UISceneSession>)
+```
+
+: *사용자가 app switcher에서 하나 이상의 app scene을 닫았다고 delegate에게 알립니다.*
+<br>*Tells the delegate that the user closed one or more of the app's scenes from the app switcher.*
