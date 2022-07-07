@@ -42,11 +42,16 @@ struct UIApplication.LaunchOptionsKey
 <br>
 
 
-```swift
+```swift```swift
 class let didFinishLaunchingNotification: NSNotification.Name
 ```
-: *앱 실행이 완료된 직후에 게시되는 notification입니다.*
-<br>*A notification that posts immediately after the app finishes launching.*
+: ```
+<br>*: *앱 실행이 완료된 직후에 게시되는 notification입니다.**
+<br>*A notification that posts immediately after the app finis
+
+<br>
+
+hes launching.*
 
 
 <br>
@@ -90,7 +95,7 @@ func applicationDidBecomeActive(UIApplication)
 ```swift
 func applicationWillResignActive(UIApplication)
 ```
-: 앱이 곧 비활성화될 것임을 `delegate`에게 알립니다.
+: 앱이 곧 inactive될 것임을 `delegate`에게 알립니다.
 <br>*Tells the delegate that the app is about to become inactive.*
 
 
@@ -120,8 +125,59 @@ func applicationWillEnterForeground(UIApplication)
 ```swift
 func applicationWillTerminate(UIApplication)
 ```
-: 앱이 종료되려고 할 때 `delegate`에게 알립니다.
+: 앱이 terminate되려고 할 때 `delegate`에게 알립니다.
 <br>*Tells the delegate when the app is about to terminate.*
 
 
 <br>
+
+```swift
+class let didBecomeActiveNotification: NSNotification.Name
+```
+: 앱이 active되면 게시되는 notification입니다.
+<br>*A notification that posts when the app becomes active.*
+
+
+<br>
+
+
+```swift
+class let didEnterBackgroundNotification: NSNotification.Name
+```
+: 앱이 background로 들어갈 때 게시되는 notification입니다.
+<br>*A notification that posts when the app enters the background.*
+
+
+<br>
+
+
+```swift
+class let willEnterForegroundNotification: NSNotification.Name
+```
+: 앱이 active app이 되기 위해 background 상태를 벗어나기 직전에 게시되는 notification입니다.
+<br>*A notification that posts shortly before an app leaves the background state on its way to becoming the active app.*
+
+
+<br>
+
+
+```swift
+class let willResignActiveNotification: NSNotification.Name
+```
+: 앱이 더 이상 active되지 않고 focus를 잃으면 게시되는 notification입니다.
+<br>*A notification that posts when the app is no longer active and loses focus.*
+
+
+<br>
+
+
+```swift
+class let willTerminateNotification: NSNotification.Name
+```
+: 앱이 terminate될 때 게시되는 notification입니다.
+<br>*A notification that posts when the app is about to terminate.*
+
+
+<br>
+<br>
+
