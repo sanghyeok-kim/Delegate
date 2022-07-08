@@ -217,7 +217,7 @@ func applicationDidReceiveMemoryWarning(UIApplication)
 ```swift
 func applicationSignificantTimeChange(UIApplication)
 ```
-: 시간에 중요한 변화가 있을 때 `delegate`에게 알립니다.
+: 시간에 중대한 변화가 있을 때 `delegate`에게 알립니다.
 <br>*Tells the delegate when there is a significant change in the time.*
 
 
