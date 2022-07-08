@@ -181,3 +181,45 @@ class let willTerminateNotification: NSNotification.Name
 <br>
 <br>
 
+
+## Responding to Environment Changes
+
+```swift
+func applicationProtectedDataDidBecomeAvailable(UIApplication)
+```
+: protected file을 지금 사용할 수 있음을 `delegate`에게 알립니다.
+<br>*Tells the delegate that protected files are available now.*
+
+
+<br>
+
+
+```swift
+func applicationProtectedDataWillBecomeUnavailable(UIApplication)
+```
+: protected file을 사용할 수 없게 되었음을 `delegate`에게 알립니다.
+<br>*Tells the delegate that the protected files are about to become unavailable.*
+
+
+<br>
+
+
+```swift
+func applicationDidReceiveMemoryWarning(UIApplication)
+```
+: 앱이 시스템에서 메모리 경고를 받으면 `delegate`에게 알립니다.
+<br>*Tells the delegate when the app receives a memory warning from the system.*
+
+
+<br>
+
+
+```swift
+func applicationSignificantTimeChange(UIApplication)
+```
+: 시간에 중요한 변화가 있을 때 `delegate`에게 알립니다.
+<br>*Tells the delegate when there is a significant change in the time.*
+
+
+<br>
+
