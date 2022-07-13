@@ -222,4 +222,52 @@ func applicationSignificantTimeChange(UIApplication)
 
 
 <br>
+<br>
 
+
+## Managing App State Restoration
+
+```swift
+func application(UIApplication, shouldSaveSecureApplicationState: NSCoder) -> Bool
+```
+: 앱의 상태를 안전하게 보존할지 여부를 `delegate`에게 묻습니다.
+<br>*Asks the delegate whether to securely preserve the app’s state.*
+
+
+<br>
+
+
+```swift
+func application(UIApplication, shouldRestoreSecureApplicationState: NSCoder) -> Bool
+```
+: 앱의 저장된 상태를 복원할지 여부를 `delegate`에게 묻습니다.
+<br>*Asks the delegate whether to restore the app’s saved state.*
+
+
+<br>
+
+
+```swift
+func application(UIApplication, viewControllerWithRestorationIdentifierPath: [String], coder: NSCoder) -> UIViewController?
+```
+: 지정된 viewController를 제공하도록 `delegate`에게 요청합니다.
+<br>*Asks the delegate to provide the specified view controller.*
+
+
+<br>
+
+
+```swift
+func application(UIApplication, willEncodeRestorableStateWith: NSCoder)
+```
+: `상태 보존 프로세스`를 시작할 때 `상위 수준 상태 정보`를 저장하도록 `delegate`에게 지시합니다.
+<br>*Tells your delegate to save any high-level state information at the beginning of the state preservation process.*
+
+
+<br>
+
+```swift
+func application(UIApplication, didDecodeRestorableStateWith: NSCoder)
+```
+: `delegate`에게 `상태 복원 프로세스`의 일부로 `상위 수준 상태 정보`를 복원하도록 지시합니다.
+<br>*Tells your delegate to restore any high-level state information as part of the state restoration process.*
