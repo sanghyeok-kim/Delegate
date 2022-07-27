@@ -271,3 +271,55 @@ func application(UIApplication, didDecodeRestorableStateWith: NSCoder)
 ```
 : `delegate`에게 `상태 복원 프로세스`의 일부로 `상위 수준 상태 정보`를 복원하도록 지시합니다.
 <br>*Tells your delegate to restore any high-level state information as part of the state restoration process.*
+
+
+<br>
+
+```swift
+class let stateRestorationBundleVersionKey: String
+```
+: 복원 아카이브 생성을 담당하는 앱 버전
+<br>*The version of your app responsible for creating the restoration archive.*
+
+
+<br>
+
+```swift
+class let stateRestorationSystemVersionKey: String
+```
+: 앱이 복원 아카이브를 생성한 시스템의 버전
+<br>*The version of the system on which your app created the restoration archive.*
+
+
+<br>
+
+
+```swift
+class let stateRestorationTimestampKey: String
+```
+: 앱이 복원 아카이브를 만든 시간
+<br>*The time your app created the restoration archive.*
+
+
+<br>
+
+
+```swift
+class let stateRestorationUserInterfaceIdiomKey: String
+```
+: 앱이 복원 아카이브를 생성할 때 적용된 사용자 인터페이스 관용구
+<br>*The user interface idiom that was in effect when your app created the restoration archive.*
+
+
+<br>
+
+
+```swift
+class let stateRestorationViewControllerStoryboardKey: String
+```
+: 뷰 컨트롤러가 포함된 스토리보드에 대한 참조
+<br>*A reference to the storyboard that contains the view controller.*
+
+
+<br>
+<br>
