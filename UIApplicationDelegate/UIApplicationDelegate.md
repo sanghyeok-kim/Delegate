@@ -323,3 +323,30 @@ class let stateRestorationViewControllerStoryboardKey: String
 
 <br>
 <br>
+
+
+## Downloading Data in the Background
+
+```swift
+func application(UIApplication, handleEventsForBackgroundURLSession: String, completionHandler: () -> Void)
+```
+: URLSession과 관련된 이벤트가 처리되기를 기다리고 있음을 `delegate`에게 알립니다.
+<br>*Tells the delegate that events related to a URL session are waiting to be processed.*
+
+
+<br>
+
+
+```swift
+enum UIBackgroundFetchResult
+```
+: background fetch 작업의 결과를 나타내는 상수
+<br>*Constants that indicate the result of a background fetch operation.*
+
+
+<br>
+<br>
+
+
+## Handling Remote Notification Registration
+
